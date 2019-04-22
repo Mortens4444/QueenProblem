@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="QueenProblem/QueenProblem.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="QueenProblem/Program.cs">
+    <Files>
+      <File FileName="QueenProblem/Program.cs" Line="11" Column="66" />
+      <File FileName="QueenProblem/Providers/ColumnProvider.cs" Line="4" Column="33" />
+      <File FileName="QueenProblem/Providers/RankProvider.cs" Line="4" Column="33" />
+      <File FileName="QueenProblem/Queen.cs" Line="3" Column="23" />
+      <File FileName="QueenProblem/Square.cs" Line="1" Column="1" />
+      <File FileName="QueenProblem/QueenList.cs" Line="21" Column="72" />
+      <File FileName="QueenProblem/QueenProblemSolver.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/mortens/Projects/QueenProblem/QueenProblem/Program.cs" line="15" column="30" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
