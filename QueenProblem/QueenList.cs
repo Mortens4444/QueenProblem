@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace QueenProblem
 {
-    public class QueenList : List<Queen>
+	public class QueenList : List<Queen>
     {
         public IEnumerable<Square> ReservedSquares
         {
@@ -29,12 +29,7 @@ namespace QueenProblem
 
         public override string ToString()
         {
-            var resultBuilder = new StringBuilder();
-            foreach (var square in this)
-            {
-                resultBuilder.AppendLine(square.ToString());
-            }
-            return resultBuilder.ToString();
+			return String.Join(", ", this);
         }
     }
 }

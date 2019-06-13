@@ -65,7 +65,7 @@ namespace QueenProblem
                                 testSquare = null;
                             }
                         }
-                        while (!goodSquare && (queen.TriedColumns.Count != numberOfQueens));
+                        while (ContinueSearch(numberOfQueens, queen.TriedColumns.Count, goodSquare));
                     }
                     else
                     {
@@ -74,7 +74,7 @@ namespace QueenProblem
                         result.RemoveAt(result.Count - 1);
                     }
                 }
-                while (!goodSquare && (queen.TriedRanks.Count != numberOfQueens));
+				while (ContinueSearch(numberOfQueens, queen.TriedRanks.Count, goodSquare));
 
                 if (goodSquare)
                 {
@@ -89,5 +89,10 @@ namespace QueenProblem
 
             return result;
         }
-    }
+
+		private static bool ContinueSearch(ushort numberOfQueens, int actualCount, bool goodSquare)
+		{
+			return !goodSquare && (actualCount != numberOfQueens);
+		}
+	}
 }

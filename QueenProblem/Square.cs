@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace QueenProblem
+﻿namespace QueenProblem
 {
-    public class Square
+	public class Square
     {
         public ushort Rank { get; set; }
 
@@ -14,10 +12,11 @@ namespace QueenProblem
 
         public Square(ushort rank, ushort column)
         {
-            Rank = rank;
+			var leftDiagonal = (ushort)(rank + column);
+			Rank = rank;
             Column = column;
-            LeftDiagonal = (ushort)(rank + column);
-            RightDiagonal = (ushort)(rank + column + rank * -2);
+            LeftDiagonal = leftDiagonal;
+            RightDiagonal = (ushort)(leftDiagonal + rank * -2);
         }
 
         public override int GetHashCode()
@@ -27,19 +26,18 @@ namespace QueenProblem
 
         public override bool Equals(object obj)
         {
-            var square = obj as Square;
-            if (square == null)
-            {
-                return false;
-            }
-            return Rank == square.Rank && Column == square.Column;
+			if (!(obj is Square square))
+			{
+				return false;
+			}
+			return Rank == square.Rank && Column == square.Column;
         }
 
         public override string ToString()
         {
-            var column = (char)('A' + Column);
-            var row = (char)('1' + Rank);
-            return column.ToString() + row;
+            var column = Column < 26 ? ((char)('A' + Column)).ToString() : $"(C{Column + 1})";
+            var rank = Rank < 9 ? ((char)('1' + Rank)).ToString() : $"(R{Rank + 1})";
+            return column + rank;
         }
     }
 }
